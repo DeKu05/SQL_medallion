@@ -69,7 +69,7 @@ SQL_medallion/
 └── README.md
 ```
 
-## Setup Instructions
+##  Setup Instructions
 
 ### Prerequisites
 - MySQL Server 8.0 or higher
@@ -97,7 +97,7 @@ cd SQL_medallion
 ### Step 3: Prepare Data File
 Ensure `orders.json` is placed in the `data/` directory with the correct path:
 ```
-D:/SQL_medallion/data/orders.json
+local path for the json files
 ```
 
 ## Pipeline Execution
@@ -107,7 +107,6 @@ D:/SQL_medallion/data/orders.json
 -- Execute the entire medallion_pipeline.sql script
 source : local_folder;
 ```
-
 
 ## Results
 
@@ -188,6 +187,30 @@ for faluty data :
 old verification method :
 
 ![alt text](9.png) 
+
+![alt text](11-1.png)
+
+new verification of data validity :
+
+![alt text](17.png)
+
+### 9. TOP and BOTTOM performers
+*TOP and BOTTOM performing cities*
+top performers :
+![alt text](14-1.png)
+
+bottom performers :
+![alt text](15-1.png)
+
+### 10. Invalid records filtering 
+*table to see the invalid records*
+
+![alt text](16-1.png)
+
+## 11. Complete successfull run of the SQL pipeline 
+
+![alt text](20.png)
+
 
 ##  Key Learnings
 
