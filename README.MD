@@ -1,4 +1,5 @@
 #  SQL Medallion Architecture Pipeline
+# SQL Medallion Architecture Pipeline
 
 A complete implementation of the Medallion Architecture (Bronze-Silver-Gold) data pipeline using MySQL, demonstrating data engineering best practices for structured data transformation and aggregation.
 
@@ -12,7 +13,7 @@ A complete implementation of the Medallion Architecture (Bronze-Silver-Gold) dat
 - [Results](#results)
 - [Screenshots](#screenshots)
 
-##  Overview
+## Overview
 
 This project implements a three-layer medallion architecture to process e-commerce order data from Indian cities. The pipeline ingests raw JSON data, transforms it into structured format, and generates business intelligence metrics.
 
@@ -22,7 +23,7 @@ This project implements a three-layer medallion architecture to process e-commer
 
 The Medallion Architecture consists of three layers:
 
-###  Bronze Layer (Raw Data)
+### Bronze Layer (Raw Data)
 - **Purpose:** Data ingestion and storage
 - **Format:** Raw JSON documents
 - **Characteristics:**
@@ -48,7 +49,7 @@ The Medallion Architecture consists of three layers:
   - Revenue analysis
   - Business KPIs
 
-##  Technologies Used
+## 🛠️ Technologies Used
 
 - **Database:** MySQL 8.0+
 - **IDE:** MySQL Workbench
@@ -68,7 +69,7 @@ SQL_medallion/
 └── README.md
 ```
 
-##  Setup Instructions
+## Setup Instructions
 
 ### Prerequisites
 - MySQL Server 8.0 or higher
@@ -108,7 +109,7 @@ source : local_folder;
 ```
 
 
-## 📊 Results
+## Results
 
 ### Sample Output - Gold Layer (City-wise Sales) for orders
 
@@ -130,7 +131,7 @@ source : local_folder;
 | Silver Layer   | 20           |
 | Gold Layer     | 7            |
 
-## 📸 Screenshots
+## Screenshots
 
 ### 1. Database Creation
 
@@ -188,29 +189,7 @@ old verification method :
 
 ![alt text](9.png) 
 
-![alt text](10.png)
-
-new verification method :
-![alt text](19.png)
-
-### 9. MAX and MIN performing cities
-
-top performers :
-![alt text](14.png)
-
-bottom performers :
-![alt text](15.png)
-
-### 10.Invalid record check
-
-invalid records : 
-![alt text](16.png)
-
-### 11.entire pipeline success screenshot 
-
-![alt text](image.png)
-
-## Key Learnings
+##  Key Learnings
 
 1. **Data Lakehouse Pattern:** Implementing medallion architecture for incremental data refinement
 2. **JSON Handling:** Working with semi-structured data in SQL databases
