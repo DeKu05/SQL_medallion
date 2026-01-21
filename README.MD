@@ -49,7 +49,7 @@ The Medallion Architecture consists of three layers:
   - Revenue analysis
   - Business KPIs
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Database:** MySQL 8.0+
 - **IDE:** MySQL Workbench
