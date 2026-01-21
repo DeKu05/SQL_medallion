@@ -1,8 +1,8 @@
-# 🏅 SQL Medallion Architecture Pipeline
+# SQL Medallion Architecture Pipeline
 
 A complete implementation of the Medallion Architecture (Bronze-Silver-Gold) data pipeline using MySQL, demonstrating data engineering best practices for structured data transformation and aggregation.
 
-## 📋 Table of Contents
+## Table of Contents
 - [Overview](#overview)
 - [Architecture](#architecture)
 - [Technologies Used](#technologies-used)
@@ -12,17 +12,17 @@ A complete implementation of the Medallion Architecture (Bronze-Silver-Gold) dat
 - [Results](#results)
 - [Screenshots](#screenshots)
 
-## 🎯 Overview
+## Overview
 
 This project implements a three-layer medallion architecture to process e-commerce order data from Indian cities. The pipeline ingests raw JSON data, transforms it into structured format, and generates business intelligence metrics.
 
 **Use Case:** Sales Analysis across major Indian cities (Mumbai, Delhi, Bangalore, Hyderabad, Pune, Chennai, Kolkata)
 
-## 🏗️ Architecture
+##  Architecture
 
 The Medallion Architecture consists of three layers:
 
-### 🥉 Bronze Layer (Raw Data)
+### Bronze Layer (Raw Data)
 - **Purpose:** Data ingestion and storage
 - **Format:** Raw JSON documents
 - **Characteristics:**
@@ -31,7 +31,7 @@ The Medallion Architecture consists of three layers:
   - Source of truth for all downstream processes
   - Includes metadata (ingestion timestamp)
 
-### 🥈 Silver Layer (Cleaned Data)
+### Silver Layer (Cleaned Data)
 - **Purpose:** Data transformation and standardization
 - **Format:** Structured relational tables
 - **Transformations:**
@@ -40,7 +40,7 @@ The Medallion Architecture consists of three layers:
   - Schema validation
   - Field standardization
 
-### 🥇 Gold Layer (Business Metrics)
+### Gold Layer (Business Metrics)
 - **Purpose:** Business-level aggregations
 - **Format:** Aggregated tables ready for analytics
 - **Metrics:**
@@ -48,14 +48,14 @@ The Medallion Architecture consists of three layers:
   - Revenue analysis
   - Business KPIs
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Database:** MySQL 8.0+
 - **IDE:** MySQL Workbench
 - **Language:** SQL
 - **Data Format:** JSON (NDJSON - Newline Delimited JSON)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 SQL_medallion/
@@ -68,7 +68,7 @@ SQL_medallion/
 └── README.md
 ```
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ### Prerequisites
 - MySQL Server 8.0 or higher
@@ -99,7 +99,7 @@ Ensure `orders.json` is placed in the `data/` directory with the correct path:
 D:/SQL_medallion/data/orders.json
 ```
 
-## 🚀 Pipeline Execution
+## Pipeline Execution
 
 ### Run Complete Pipeline
 ```sql
@@ -166,7 +166,7 @@ FROM silver_orders
 GROUP BY city;
 ```
 
-## 📊 Results
+## Results
 
 ### Sample Output - Gold Layer (City-wise Sales)
 
@@ -188,7 +188,7 @@ GROUP BY city;
 | Silver Layer   | 20           |
 | Gold Layer     | 7            |
 
-## 📸 Screenshots
+## Screenshots
 
 ### 1. Database Creation
 
@@ -238,7 +238,7 @@ GROUP BY city;
 
 ![alt text](9.png)
 
-## 🎓 Key Learnings
+## Key Learnings
 
 1. **Data Lakehouse Pattern:** Implementing medallion architecture for incremental data refinement
 2. **JSON Handling:** Working with semi-structured data in SQL databases
@@ -247,13 +247,4 @@ GROUP BY city;
 5. **SQL Best Practices:** Using proper data types, constraints, and aggregations
 
 
-## 🚀 Future Enhancements
-
-- [ ] Add incremental data loading logic
-- [ ] Implement data quality checks and validation
-- [ ] Add error handling and logging tables
-- [ ] Create materialized views for gold layer
-- [ ] Implement CDC (Change Data Capture)
-- [ ] Add data retention policies
-- [ ] Create automated pipeline scheduling
 
