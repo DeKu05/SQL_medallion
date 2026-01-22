@@ -46,7 +46,7 @@ SELECT
     CAST(JSON_UNQUOTE(raw_json->'$.order_date') AS DATE) AS order_date,
     ingestion_time
 FROM bronze_orders
-WHERE CAST(JSON_UNQUOTE(raw_json->'$.amount') AS DECIMAL(10,2)) <= 0;
+WHERE CAST(JSON_UNQUOTE(raw_json->'$.amount') AS DECIMAL(10,2)) > 0;
 
 
 -- ===============================
